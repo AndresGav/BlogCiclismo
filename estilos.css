@@ -177,7 +177,7 @@ header {
 }
 .contenedor-vestuario-item:hover{
     background-color: #414141d0;
-    transition: 5s;
+    transition: 3s;
 }
 
 /*SECCION TIPOS*/
