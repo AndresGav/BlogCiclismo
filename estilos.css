@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI";
+}
+
+
+/*NAV BAR*/
+
+.toolBar {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    height: 60px;
+    box-shadow: 0 2px 5px #00000038;
+    padding: 0 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-titulo-toolBar {
+    display: flex;
+    align-items: center;
+}
+
+.logo-toolBar>img {
+    width: 75px;
+    height: 60px;
+}
+
+.titulo-toolBar {
+    padding-left: 10px;
+}
+
+.toolBar a {
+    color: black;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.toolBar a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+
+/*HEADER*/
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: #c25f5f;
+    background: linear-gradient(to right, #000000a6, #eb575731), url(https://pictures.ssg-service.com/194/194892-chasing-trail-kabush-vancouver_original_1.jpg);
+    background-size: cover;
+    background-attachment: fixed; /*PERMITE QUE LA IMAGEN SEA ESTATICO*/
+    position: relative;
+}
+
+.contenedor-header {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.titulo-header {
+    display: flex;
+    color: rgba(255, 255, 255, 0.76);
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.ola {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    bottom: 0;
+}
+
+.ola svg path {
+    fill: white !important;
+}
+
+
+/*MAIN PRINCIPAL INFORMACION*/
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color:  #4d0686;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+/*SECCION ESTRUCTURA BICI*/
+
+.seccion-estructura {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.img-estructura {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img-estructura img {
+    object-fit: cover;
+}
+
+/*SECCION VESTUARIO*/
+.contenedor-vestuario{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-vestuario-item{
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+    border-radius: 20px;
+}
+
+.vestuario-imagen img{
+    width: 240px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/*FUNCION PARA HACER APARECER CUANDO EL CURSOR ESTE POR ENCIMA DE LAS IMAGENES*/
+.vestuario-descripcion{
+    transform: scale(0);
+    text-align: justify;  
+    width: 350px;
+    padding-left: 20px; 
+    color: white;
+}
+.vestuario-nombre{
+    text-align: center;
+    width: 300px;
+    font-size: 20px;
+    transform: scale(0);
+    color: white;
+    
+}
+.vestuario-nombre h2{
+    border-bottom: 3px solid #70028b;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.contenedor-vestuario-item:hover .vestuario-descripcion{
+    transform: scale(1);
+    transition: 1s;
+    
+}
+.contenedor-vestuario-item:hover .vestuario-nombre{
+    transform: scale(1);
+    transition: 1s;
+}
+.contenedor-vestuario-item:hover{
+    background-color: #414141d0;
+    transition: 5s;
+}
+
+/*SECCION TIPOS*/
+
+.seccion-tipos {
+    background: #f2f2f2;
+}
+
+.contenedor-tipos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /*Especifica si es nesesario realizar un salto de linea*/
+}
+
+.caja-tipo {
+    width: 24%;
+    margin-top: 10px;
+    height: 200px;
+    overflow: hidden; /*La propiedad overflow especifica si se va a recortar el contenido o agregar barras de desplazamiento cuando el contenido de un elemento es demasiado grande para caber en un área especificada.*/
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.caja-tipo>img {
+    width: 100%;
+    height: 100%;
+}
+
+.hover-tipo p {
+    text-align: center;
+    font-size: 30px;
+    color: White;
+    font-weight: bolder;
+}
+
+.hover-tipo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273, 91%, 27%, 0.555);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-tipo:hover .hover-tipo {
+    transform: scale(1);
+}
+
+
+/*SECCION RICHARD*/
+
+.contenedor-campeon {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.info-campeon {
+    margin-left: 20px;
+}
+
+.info-campeon h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.info-campeon p {
+    padding: 0px 0px 15px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/*SECCION BENEFICIOS*/
+.seccion-beneficios {
+    background: #f2f2f2;
+}
+
+.contenedor-beneficios{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+}
+
+.contenedor-texto-beneficios span{
+    background-color:#642a73;;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 3px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenedor-texto-beneficios h4{
+    margin: 5%;
+}
+.contenedor-beneficios img{
+    height: 50%;
+    width: 50%;
+}
+/*FOOTER*/
+
+footer {
+    background: #414141;
+    padding: 60px 0 30px 0px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.caja-footer {
+    text-align: center;
+}
+
+.contenedor-footer h4 {
+    color: white;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.contenedor-footer p {
+    color: white;
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    color: #9e9e9e;
+}
+
+
+/*SOCIAL NETWORK ICONOS*/
+
+.float-icos {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 16px;
+    padding: 16px;
+}
+
+.float-icos a {
+    display: block;
+}
+
+.float-icos img {
+    width: 30px;
+    height: 30px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    border-radius: 999px;
+    background: transparent;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 5px transparent;
+}
